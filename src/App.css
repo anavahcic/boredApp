@@ -36,3 +36,81 @@
     transform: rotate(360deg);
   }
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+html {
+  font-size: 125%;
+}
+
+body {
+  background-color: #F9F2ED;
+  text-align: center;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+h1, h2, p {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+a{
+  text-decoration: none;
+  color: #ea593e;
+}
+a:hover {
+  color: #F9F2ED;
+}
+header {
+  padding: 50px;
+  
+}
+footer {
+  color: #ea593e;
+  background-color: #262626;
+}
+footer p {
+  font-size: 0.8rem;
+  padding: 10px;
+ 
+}
+
+label, select {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+
+
+@media(max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 0.7rem;
+  }
+  p {
+    font-size: 0.6rem;
+  }
+  footer p {
+    font-size: 0.4rem;
+  }
+}
+
+

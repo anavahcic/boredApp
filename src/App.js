@@ -36,11 +36,23 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-          <h1>Bored App</h1>
-      </header>
-      <Form getUserChoice={setUserChoice}/>
-      <p>{activities}</p>
+      <div className="wrapper">
+          <body>
+            <header>
+              <h1>Bored App</h1>
+              <h2>Please select an activity below.</h2>
+            </header>
+            <main>
+              <div className="textContainer">
+                <Form getUserChoice={setUserChoice}/>
+                <p>{activities}</p>
+              </div>
+            </main>
+            <footer>
+              <p>Created @ <a href="https://junocollege.com/" target="blamk">Juno College of Technology</a></p>
+            </footer>
+          </body>
+      </div>
     </div>
   );
 }
