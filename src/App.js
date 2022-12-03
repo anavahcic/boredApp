@@ -33,8 +33,8 @@ function App() {
       <div className="wrapper">
           <body>
             <header>
-              <h1>Bored App</h1>
-              <h2>Please select an activity below.</h2>
+              <h1>The Bored App helps you find things to do when you are bored</h1>
+              <h2>Please select an activity below</h2>
             </header>
             <main>
               <div className="textContainer">

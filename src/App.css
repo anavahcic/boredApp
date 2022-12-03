@@ -55,9 +55,15 @@ body {
 h1, h2, p {
   font-family: 'Luckiest Guy', cursive;
   color:#262626;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
   text-transform: uppercase;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -95,6 +101,7 @@ label, select {
   text-transform: uppercase;
   text-align: center;
   padding: 5px 10px;
+  margin-bottom: 20px;
 }
 
 select {
@@ -117,13 +124,14 @@ select {
 
 @media(max-width: 480px) {
   h1 {
-    font-size: 1.8rem;
+    font-size: 1rem;
   }
   h2 {
     font-size: 0.7rem;
   }
   label, select, p {
     font-size: 0.6rem;
+    margin-bottom: 10px;
   }
   footer p {
     font-size: 0.4rem;
