@@ -34,7 +34,7 @@ function App() {
           <body>
             <header>
               <h1>The Bored App helps you find things to do when you are bored</h1>
-              <h2>Please select an activity below</h2>
+              <h2>Please find an activity below</h2>
             </header>
             <main>
               <div className="textContainer">
