@@ -54,6 +54,7 @@ body {
 
 h1, h2, p {
   font-family: 'Luckiest Guy', cursive;
+  color:#262626;
   font-size: 3rem;
   text-align: center;
   text-transform: uppercase;
@@ -79,10 +80,10 @@ header {
   
 }
 footer {
-  color: #ea593e;
   background-color: #262626;
 }
 footer p {
+  color: #ea593e;
   font-size: 0.8rem;
   padding: 10px;
  
@@ -96,6 +97,22 @@ label, select {
   padding: 5px 10px;
 }
 
+select {
+  background-color: #F87474;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.textContainer {
+  border: 10px solid #3AB0FF;
+  border-radius: 10px;
+  background-color: #FFB562;
+  padding: 20px;
+  max-width: 40%;
+  margin: 0 auto;
+  margin-bottom: 140px;
+
+}
 
 
 @media(max-width: 480px) {
@@ -105,12 +122,17 @@ label, select {
   h2 {
     font-size: 0.7rem;
   }
-  p {
+  label, select, p {
     font-size: 0.6rem;
   }
   footer p {
     font-size: 0.4rem;
   }
+  .textContainer {
+    margin-bottom: 90px;
+  }
 }
+
+
 
 

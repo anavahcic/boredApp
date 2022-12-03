@@ -3,14 +3,7 @@ import axios from 'axios';
 import Form from "./Form.js";
 import './App.css';
 
-// PSEUDO CODE
-// An app that queries the Bored API for activities, and displays them on the page
-// A dropdown that allows users to select an activity based on type of activity
 
-// Step 1: When my App.js component mounts, make an API call to the Bored API 
-        // To make the API call, I am going to use the axios library 
-        // Do the API call insde a useEffect
-        // Pass the second argument, a dependency array, to useEffect to prevent callback function being run every time our component re-renders
 function App() {
 
   const [activities, setActivities] = useState([]);
@@ -27,6 +20,7 @@ function App() {
     }).then((response) => {
       // console.log(response.data);
        setActivities(response.data.activity);
+
         });
 
      
@@ -61,10 +55,14 @@ export default App;
 
 
 
+// PSEUDO CODE
+// An app that queries the Bored API for activities, and displays them on the page
+// A dropdown that allows users to select an activity based on type of activity
 
-
-
-
+// Step 1: When my App.js component mounts, make an API call to the Bored API 
+        // To make the API call, I am going to use the axios library 
+        // Do the API call insde a useEffect
+        // Pass the second argument, a dependency array, to useEffect to prevent callback function being run every time our component re-renders
 
 // Step 2: Once we get our data back, we will have to modify the response from the API so that includes type of activity data before saving it in state so it's ready to be used for filtering, and then store results of that call in state.
         // Map over the array of activities from the API and create a new property orientation to save on the activity objects. To create the property, we are using the type of activity
