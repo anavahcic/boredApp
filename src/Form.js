@@ -14,7 +14,9 @@ const Form = (props) => {
                 name="activityPick" 
                 id="activityPick"
                 onChange={handleSubmit}
+                value={props.userChoice}
             >
+                <option value="placeholder" disabled>Pick One</option>
                 <option value="education">Education</option>
                 <option value="recreational">Recreational</option>
                 <option value="social">Social</option>

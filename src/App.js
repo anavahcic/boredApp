@@ -7,21 +7,27 @@ import './App.css';
 function App() {
 
   const [activities, setActivities] = useState([]);
-  const [userChoice, setUserChoice] = useState('');
+  const [userChoice, setUserChoice] = useState('placeholder');
+
+
 
   useEffect(() => {
-    axios({
-      url: `https://www.boredapi.com/api/activity?type=${userChoice}`,
-      method: "GET",
-      dataResponse: "json",
-      params: {
-        query: "activity",
-      },
-    }).then((response) => {
-      // console.log(response.data);
-       setActivities(response.data.activity);
 
-        });
+    if (userChoice !== "placeholder")  {
+      axios({
+        url: `https://www.boredapi.com/api/activity?type=${userChoice}`,
+        method: "GET",
+        dataResponse: "json",
+        params: {
+          query: "activity",
+        },
+      }).then((response) => {
+        // console.log(response.data);
+         setActivities(response.data.activity);
+  
+          });
+      
+    }
 
      
   }, [userChoice]);
@@ -38,7 +44,10 @@ function App() {
             </header>
             <main>
               <div className="textContainer">
-                <Form getUserChoice={setUserChoice}/>
+                <Form 
+                getUserChoice={setUserChoice}
+                userChoice={userChoice}
+                />
                 <p>{activities}</p>
               </div>
             </main>
