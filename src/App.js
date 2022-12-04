@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     axios({
-      url: `http://www.boredapi.com/api/activity?type=${userChoice}`,
+      url: `https://www.boredapi.com/api/activity?type=${userChoice}`,
       method: "GET",
       dataResponse: "json",
       params: {
