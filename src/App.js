@@ -7,7 +7,7 @@ import './App.css';
 function App() {
 
   const [activities, setActivities] = useState([]);
-  const [userChoice, setUserChoice] = useState('placeholder');
+  const [userChoice, setUserChoice] = useState("placeholder");
 
 
 
@@ -26,7 +26,6 @@ function App() {
          setActivities(response.data.activity);
   
           });
-      
     }
 
      
@@ -38,19 +37,20 @@ function App() {
     <div className="App">
       <div className="wrapper">
           <body>
-            <header>
-              <h1>The Bored App helps you find things to do when you are bored</h1>
-              <h2>Please find an activity below</h2>
-            </header>
-            <main>
-              <div className="textContainer">
-                <Form 
-                getUserChoice={setUserChoice}
-                userChoice={userChoice}
-                />
-                <p>{activities}</p>
-              </div>
-            </main>
+              <header>
+                <h1>The Bored App helps you find things to do when you are bored</h1>
+                <h2>Please find an activity below</h2>
+              </header>
+              <main>
+                <div className="textContainer">
+                 <Form 
+                  getUserChoice={setUserChoice}
+                  userChoice={userChoice}
+                  />
+                  <p>{activities}</p>
+                </div>
+              </main>
+          
             <footer>
               <p>Created @ <a href="https://junocollege.com/" target="blamk">Juno College of Technology</a></p>
             </footer>
