@@ -4,7 +4,7 @@ const Form = (props) => {
         e.preventDefault();
         props.getUserChoice(e.target.value);
     }
-
+    // Form to choose a category
     return(
         <form>
             <label htmlFor="activityPick">Choose category:</label>
