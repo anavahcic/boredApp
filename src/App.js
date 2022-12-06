@@ -1,4 +1,6 @@
 import {useEffect, useState} from 'react';
+import {getDatabase, ref, onValue, push, remove} from 'firebase/database';
+import firebase from './firebase.js';
 import axios from 'axios';
 import Form from "./Form.js";
 import './App.css';
@@ -8,8 +10,9 @@ function App() {
 
   const [activities, setActivities] = useState([]);
   const [userChoice, setUserChoice] = useState("placeholder");
+  const [displayUserActivity, setDisplayUserActivity] = useState([]);
 
-
+  console.log(displayUserActivity)
 
   useEffect(() => {
 
@@ -31,7 +34,32 @@ function App() {
      
   }, [userChoice]);
 
+  // connection to database
+  useEffect(() => {
+    const database = getDatabase(firebase)
+    const dbRef = ref(database)
+    onValue(dbRef, (response) => {
+      const newState = []
+      const data = response.val()
+      for (let propertyName in data) {
+        newState.push(data[propertyName])
+      }
+      setDisplayUserActivity(newState);
+    })
+  //   onValue(debRef, (response) => {
+  //     const data = response.val()
+  // });
+}, []);
+
   // console.log(userChoice);
+
+  // function to handle data submission
+  const handleSubmit = () => {
+    const database = getDatabase(firebase);
+    const dbRef = ref(database);
+    push(dbRef, `${activities}`);
+  
+  }
 
   return (
     <div className="App">
@@ -48,9 +76,18 @@ function App() {
                 userChoice={userChoice}
                 />
                 <p>{activities}</p>
+                <button onClick={handleSubmit}>Save activity</button>
               </div>
             </main>
           </body>
+      </div>
+      <div className="activityDisplay">
+          {
+            displayUserActivity.map(displayActivity => {
+             return <p>{displayActivity}</p>
+
+            }) 
+          }
       </div>
           <footer>
             <p>Created @ <a href="https://junocollege.com/" target="blamk">Juno College of Technology</a></p>

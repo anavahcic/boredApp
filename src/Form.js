@@ -1,5 +1,3 @@
-
-
 const Form = (props) => {
 
     const handleSubmit = (e) => {
@@ -26,9 +24,9 @@ const Form = (props) => {
                 <option value="relaxation">Relaxation</option>
                 <option value="music">Music</option>
                 <option value="busywork">Busywork</option>
-            </select>
-           
+            </select>  
         </form>
+
     )
 }
 
