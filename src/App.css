@@ -108,10 +108,16 @@ label, select {
   margin-bottom: 20px;
 }
 
-select {
+select, button {
   background-color: #F87474;
   border-radius: 20px;
   padding: 10px;
+}
+
+button {
+  font-family: 'Luckiest Guy', cursive;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .textContainer {

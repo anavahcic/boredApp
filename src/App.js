@@ -71,8 +71,8 @@ function App() {
   return (
     <div className="App">
       <header>
-          <h1>Are you bored?</h1>
-          <h2>Let's find things to do.</h2>
+          <h1>The Bored App</h1>
+          <h2>Helps you find things to do</h2>
       </header>
       <main>
           <div className="textContainer">
@@ -82,11 +82,11 @@ function App() {
               />
               <p>{activities}</p>
           </div>
-          <div className="textCotainer">
-            <h2>Your favourite activities:</h2>
+            <h2>Found something you like? That's awesome!</h2>
+            <h2>Make sure you save your favourite activities here:</h2>
             <button onClick={handleSubmit}>Save activity</button>
             <button onClick={removeSubmit}>Remove activity</button>
-          </div>
+          
           <div className="activityDisplay">
               {
                 displayUserActivity.map(displayActivity => {
@@ -96,7 +96,7 @@ function App() {
           </div>
       </main>
       <footer>
-          <p>Created @ <a href="https://junocollege.com/" target="blamk">Juno College of Technology</a></p>
+          <p>Created @ <a href="https://junocollege.com/" target="blank">Juno College of Technology</a> by <a href="https://www.anavahcic.com/" target="blank">Ana Vahcic</a></p>
       </footer>
     </div>
   );
