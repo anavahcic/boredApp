@@ -11,6 +11,7 @@ function App() {
   const [activities, setActivities] = useState([]);
   const [userChoice, setUserChoice] = useState("placeholder");
   const [displayUserActivity, setDisplayUserActivity] = useState([]);
+  // const [removeUserActivity, setRemoveUserActivity] = useState([]);
 
   console.log(displayUserActivity)
 
@@ -30,14 +31,14 @@ function App() {
   
           });
     }
-
-     
   }, [userChoice]);
 
   // connection to database
   useEffect(() => {
+
     const database = getDatabase(firebase)
     const dbRef = ref(database)
+
     onValue(dbRef, (response) => {
       const newState = []
       const data = response.val()
@@ -58,40 +59,45 @@ function App() {
     const database = getDatabase(firebase);
     const dbRef = ref(database);
     push(dbRef, `${activities}`);
-  
   }
+
+  const removeSubmit = () => {
+    const database = getDatabase(firebase);
+    const dbRef = ref(database);
+    remove(dbRef);
+  }
+  
 
   return (
     <div className="App">
-      <div className="wrapper">
-          <body>
-            <header>
-              <h1>The Bored App helps you find things to do when you are bored</h1>
-              <h2>Please find an activity below</h2>
-            </header>
-            <main>
-              <div className="textContainer">
-                <Form 
-                getUserChoice={setUserChoice}
-                userChoice={userChoice}
-                />
-                <p>{activities}</p>
-                <button onClick={handleSubmit}>Save activity</button>
-              </div>
-            </main>
-          </body>
-      </div>
-      <div className="activityDisplay">
-          {
-            displayUserActivity.map(displayActivity => {
-             return <p>{displayActivity}</p>
-
-            }) 
-          }
-      </div>
-          <footer>
-            <p>Created @ <a href="https://junocollege.com/" target="blamk">Juno College of Technology</a></p>
-          </footer>
+      <header>
+          <h1>Are you bored?</h1>
+          <h2>Let's find things to do.</h2>
+      </header>
+      <main>
+          <div className="textContainer">
+              <Form 
+              getUserChoice={setUserChoice}
+              userChoice={userChoice}
+              />
+              <p>{activities}</p>
+          </div>
+          <div className="textCotainer">
+            <h2>Your favourite activities:</h2>
+            <button onClick={handleSubmit}>Save activity</button>
+            <button onClick={removeSubmit}>Remove activity</button>
+          </div>
+          <div className="activityDisplay">
+              {
+                displayUserActivity.map(displayActivity => {
+                    return <p>{displayActivity}</p>
+                  }) 
+              }
+          </div>
+      </main>
+      <footer>
+          <p>Created @ <a href="https://junocollege.com/" target="blamk">Juno College of Technology</a></p>
+      </footer>
     </div>
   );
 }
