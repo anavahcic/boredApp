@@ -154,13 +154,14 @@ footer p {
   }
 
   .textContainer {
-    padding: 8px;
-    margin-bottom: 30px;
+    padding: 10px;
+    margin-bottom: 60px;
     max-width: 70%;
+    border: 5px solid #3AB0FF;
   }
 
   button {
-    padding: 10px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
