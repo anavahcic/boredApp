@@ -96,7 +96,7 @@ function App() {
           </div>
           <div>
             <h2>Found something you like?</h2>
-            <h2>Make sure you save your favourites here:</h2>
+            <h2>Save your favourites here:</h2>
             <button onClick={handleSubmit}>Save activity</button>
             <button onClick={removeSubmit}>Remove activity</button>  
           </div>
