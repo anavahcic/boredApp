@@ -22,14 +22,12 @@ html { box-sizing: border-box;}
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
@@ -45,15 +43,14 @@ html { box-sizing: border-box;}
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Roboto+Mono&display=swap');
 
 html {
   font-size: 125%;
 }
 
 body {
-  background-color: #262626;
-  background-color: #F9F2ED;
+  background-color: #2ec4b6;
   text-align: center;
 }
 
@@ -63,10 +60,19 @@ body {
   max-width: 90%;
 }
 
+header, footer  {
+  background-color: #2ec4b6;
+}
+
+header h1 {
+  font-family: 'PT Sans', sans-serif;
+  margin-bottom: 20px;
+  color: #ff9f1c;
+}
+
 h1, h2, p {
   font-family: 'Luckiest Guy', cursive;
   color:#262626;
-  /* color: #F9F2ED; */
   font-size: 2.5rem;
   text-align: center;
   text-transform: uppercase;
@@ -75,36 +81,36 @@ h1, h2, p {
 }
 
 h2 {
-  font-size: 1.4rem;
-  padding: 10px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.2rem;
+  padding: 20px;
 }
 
 p {
+  font-family: 'Roboto Mono', monospace;
   font-size: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 a {
   text-decoration: none;
-  color: #ea593e;
+  color: #ff9f1c;
 }
 
 a:hover {
-  color: #3AB0FF;
-}
-
-header {
-  padding: 30px;
+  color: #ffffff;
 }
 
 footer p {
-  color: #ea593e;
+  font-family: 'PT Sans', sans-serif;
   font-size: 0.8rem;
-  padding: 10px;
+  color: #ff9f1c;
 }
 
 label, select {
-  font-family: 'Luckiest Guy', cursive;
-  font-size: 1.2rem;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1rem;
   text-transform: uppercase;
   text-align: center;
   padding: 5px 10px;
@@ -112,27 +118,29 @@ label, select {
 }
 
 select, button {
-  background-color: #F87474;
+  background-color: #ffbf69;
   border-radius: 20px;
   padding: 10px;
 }
 
 button {
-  font-family: 'Luckiest Guy', cursive;
+  font-family: 'Roboto Mono', monospace;
+  text-transform: uppercase;
   cursor: pointer;
   margin: 20px 10px;
 }
 
-.textContainer {
-  border: 10px solid #3AB0FF;
+.textContainer p {
+  border: 5px solid #ffbf69;
+  background-color: #cbf3f0;
   border-radius: 10px;
-  background-color: #FFB562;
   padding: 20px;
   max-width: 40%;
   margin: 0 auto;
 }
+
 footer p {
-  margin-top: 12%;
+  margin-top: 200px;
 }
 
 
@@ -144,22 +152,21 @@ footer p {
     font-size: 1rem;
   }
   h2 {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     padding: 5px;
   }
   label, select, p, button {
-    font-size: 0.6rem;
-    margin-bottom: 10px;
+    font-size: 0.5rem;
     padding: 5px;
   }
-
-  .textContainer {
+  .textContainer p {
     padding: 10px;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
     max-width: 70%;
-    border: 5px solid #3AB0FF;
+    border: 5px solid #ffbf69;
+    background-color: #cbf3f0;
+    border-radius: 10px;
   }
-
   button {
     padding: 5px;
     display: flex;
@@ -167,9 +174,9 @@ footer p {
     margin: 0 auto;
     margin-bottom: 5px;
   }
-
   footer p {
     font-size: 0.4rem;
+    margin-top: 0px;
   }
 }
 
