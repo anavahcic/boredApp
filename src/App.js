@@ -82,24 +82,22 @@ function App() {
   return (
     <div className="App">
       <div className="wrapper">
-      <header>
+        <header>
           <h1>The Bored App</h1>
           <h2>Helps you find things to do</h2>
-      </header>
-      <main>
+        </header>
+        <main>
+            <Form 
+            getUserChoice={setUserChoice}
+            userChoice={userChoice}
+            />
+
           <div className="textContainer">
-              <Form 
-              getUserChoice={setUserChoice}
-              userChoice={userChoice}
-              />
-              <p>{activities}</p>
+            <p>{activities}</p>
           </div>
-          <div>
-            <h2>Found something you like?</h2>
-            <h2>Save your favourites here:</h2>
-            <button onClick={handleSubmit}>Save activity</button>
-            <button onClick={removeSubmit}>Remove activity</button>  
-          </div>
+          <h2>Found something you like? Save your favourites here:</h2>
+          <button onClick={handleSubmit}>Save activity</button>
+          <button onClick={removeSubmit}>Remove activity</button>  
           <div className="textContainer">
             <div className="activityDisplay">
               {
@@ -109,7 +107,7 @@ function App() {
               }
             </div>
           </div>
-      </main>
+        </main>
       </div>
       <footer>
           <p>Created @ <a href="https://junocollege.com/" target="blank">Juno College of Technology</a> by <a href="https://www.anavahcic.com/" target="blank">Ana Vahcic</a></p>
